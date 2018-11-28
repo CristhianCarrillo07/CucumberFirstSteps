@@ -3,6 +3,7 @@ package pages;
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
+import util.ScreenShot;
 
 public class SuccessfulSignUpPage {
     private WebDriver driver;
@@ -16,6 +17,6 @@ public class SuccessfulSignUpPage {
         String receivedURL = driver.getCurrentUrl();
         String expectedURL = "http://newtours.demoaut.com/create_account_success.php";
         Assert.assertTrue(expectedURL.equals(receivedURL));
-
+        ScreenShot.takeScreenShot(driver);
     }
 }
