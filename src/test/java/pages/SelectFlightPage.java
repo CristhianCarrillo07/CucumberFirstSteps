@@ -20,8 +20,6 @@ public class SelectFlightPage {
     @FindBy(xpath = "//input[@name='reserveFlights']")
     private WebElement continueButton;
 
-
-
     public SelectFlightPage(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver, this);
