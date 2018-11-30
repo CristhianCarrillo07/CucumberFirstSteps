@@ -5,9 +5,9 @@ import cucumber.api.junit.Cucumber;
 import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(features = "classpath:SubmitClient.feature",
+@CucumberOptions(features = "classpath:BookRoundFlightTrip.feature",
         glue = "classpath:steps",
-        tags = "@DataDriving-SignUp",
+        tags = "@Booking",
         format = {"pretty", "html:target/cucumber", "json:target/cucumber-report.json"})
 public class RunTest {
 

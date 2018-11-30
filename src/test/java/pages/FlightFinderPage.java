@@ -39,6 +39,7 @@ public class FlightFinderPage {
     private WebElement continueButton;
     @FindBy(xpath = "//input[@name='servClass']")
     private List<WebElement> serviceClassOptions;
+    public static int noPassengers;
 
     public FlightFinderPage(WebDriver driver){
         this.driver = driver;
@@ -58,20 +59,20 @@ public class FlightFinderPage {
         Select dropToMonth = new Select(selectorToMonth);
         Select dropToDay = new Select(selectorToDay);
         Random r = new Random();
-        dropPassengers.selectByIndex(r.nextInt(4));
-        dropFromPort.selectByIndex(r.nextInt(10));
-        dropFromMonth.selectByIndex(r.nextInt(12));
-        dropFromDay.selectByIndex(r.nextInt(31));
-        dropToPort.selectByIndex(r.nextInt(10));
-        dropToMonth.selectByIndex(r.nextInt(12));
-        dropToDay.selectByIndex(r.nextInt(31));
+        noPassengers = r.nextInt(dropPassengers.getOptions().size());
+        dropPassengers.selectByIndex(noPassengers);
+        dropFromPort.selectByIndex(r.nextInt(dropFromPort.getOptions().size()));
+        dropFromMonth.selectByIndex(r.nextInt(dropFromMonth.getOptions().size()));
+        dropFromDay.selectByIndex(r.nextInt(dropFromDay.getOptions().size()));
+        dropToPort.selectByIndex(r.nextInt(dropToPort.getOptions().size()));
+        dropToMonth.selectByIndex(r.nextInt(dropToMonth.getOptions().size()));
+        dropToDay.selectByIndex(r.nextInt(dropToDay.getOptions().size()));
     }
 
     public void he_selects_all_the_preferences() throws Throwable {
         Random r = new Random();
         int serviceOption = r.nextInt(serviceClassOptions.size());
-        System.out.println(serviceOption);
-        serviceClassOptions.get(2).click();
+        serviceClassOptions.get(serviceOption).click();
         Select dropAirline = new Select(selectorAirline);
         dropAirline.selectByIndex(r.nextInt(4));
     }

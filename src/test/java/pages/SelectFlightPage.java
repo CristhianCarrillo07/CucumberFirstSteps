@@ -9,6 +9,7 @@ import java.util.List;
 import java.util.Random;
 
 public class SelectFlightPage {
+
     private WebDriver driver;
     @FindBy(xpath = "//img[@src='/images/masts/mast_selectflight.gif']")
     private WebElement selectFlight;
@@ -18,6 +19,8 @@ public class SelectFlightPage {
     private List<WebElement> returnOptions;
     @FindBy(xpath = "//input[@name='reserveFlights']")
     private WebElement continueButton;
+
+
 
     public SelectFlightPage(WebDriver driver) {
         this.driver = driver;

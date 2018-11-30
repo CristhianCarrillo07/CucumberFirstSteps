@@ -1,11 +1,8 @@
 package steps;
 
 import cucumber.api.java.en.When;
-import models.UserDetails;
 import util.DriverFactory;
 import pages.LandingPage;
-
-import java.util.List;
 
 public class LandingPageSteps extends DriverFactory {
     @When("^he click on register$")

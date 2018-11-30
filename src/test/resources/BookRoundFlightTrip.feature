@@ -1,3 +1,4 @@
+@Booking
 Feature: Booking a round flight trip
 
   Scenario: Succesful round flight trip

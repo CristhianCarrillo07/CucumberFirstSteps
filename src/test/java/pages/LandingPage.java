@@ -6,8 +6,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.LoadableComponent;
 
-public class LandingPage {
+public class LandingPage  {
     private WebDriver driver;
     @FindBy(xpath = "//a[text()='REGISTER']")
     private WebElement registerButton;

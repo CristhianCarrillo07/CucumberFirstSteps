@@ -24,7 +24,7 @@ public class BookFlightPageSteps extends DriverFactory {
     }
 
     @And("^he enters his number credit card number (\\d+)$")
-    public void he_enters_his_number_credit_card_number(int creditCardNumber) throws Throwable {
+    public void he_enters_his_number_credit_card_number(long creditCardNumber) throws Throwable {
         new BookFlightPage(driver).he_enters_his_number_credit_card_number(creditCardNumber);
     }
 
